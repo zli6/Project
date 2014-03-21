@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  instructor: MyString
+  block: MyString
+  grade: 1.5
+  user_id: 1
+
+two:
+  name: MyString
+  instructor: MyString
+  block: MyString
+  grade: 1.5
+  user_id: 1

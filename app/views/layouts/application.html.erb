@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+  <meta charset="utf-8">
+  <title>Project</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+  <%  if session[:user_id].present? %>
+  <% @u = User.find_by_id(session[:user_id].to_i) %>
+  <p> Logged in as <%= @u.name %> - <a href="/logout">Logout</a> </p> 
+  <% end %>
+  
+
+  </nav>
+<%= yield %>
+
+</body>
+</html>

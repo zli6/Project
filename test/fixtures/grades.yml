@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  percentage: 1.5
+  category: MyString
+  weight: 1.5
+  assignment: MyString
+  score: 1.5
+  lesson_id: 1
+
+two:
+  percentage: 1.5
+  category: MyString
+  weight: 1.5
+  assignment: MyString
+  score: 1.5
+  lesson_id: 1
