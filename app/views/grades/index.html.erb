@@ -66,35 +66,38 @@
 <table>
   <thead>
     <tr>
-      <th>Percentage</th>
+      
       <th>Category</th>
       <th>Weight</th>
-      <th>Assignment</th>
-      <th>Score</th>
-      <th>Lesson</th>
-      <th></th>
+       <th></th>
       <th></th>
       <th></th>
     </tr>
   </thead>
 
   <tbody>
+    
     <% @grades.each do |grade| %>
+    
+<div class="list-group">
+  <a href="/show" class="list-group-item active"><%= grade.assignment %>(<%= grade.percentage %>)(<%= grade.score %>)</a>
+</div>
+        <% end %>
+     <% @grades.each do |grade| %>
       <tr>
-        <td><%= grade.percentage %></td>
+        
         <td><%= grade.category %></td>
         <td><%= grade.weight %></td>
-        <td><%= grade.assignment %></td>
-        <td><%= grade.score %></td>
-        <td><%= grade.lesson_id %></td>
+        
         <td><%= link_to 'Show', grade %></td>
         <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
-        <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   
       </tr>
-    <% end %>
-  </tbody>
+    </tbody>
 </table>
 
+ <% end %>
 <br>
 
 <%= link_to 'New Grade', new_grade_path %>

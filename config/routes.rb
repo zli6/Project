@@ -5,6 +5,7 @@ Project::Application.routes.draw do
   get "/login" => 'pages#login'
   get "/logout" => 'pages#logout'
   
+  
   get "/session/create" => 'pages#create'
 
   resources :grades
